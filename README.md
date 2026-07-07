@@ -2,6 +2,20 @@
 
 Comparison of open-source "humanizer" / "de-slop" agent skills that remove AI writing patterns from prose. This repo evaluates candidates and informs the construction of a personal humanizer skill at `~/code/output-humanizer-skill/`.
 
+## Results
+
+Five candidates scored across 10 rubric criteria (3=strongest, 1=weakest). Full matrix and reasoning in [`comparison/`](./comparison/).
+
+| Rank | Candidate | /30 | Verdict |
+|---|---|---|---|
+| 1 | **conorbronsdon-avoid-ai-writing** | **28** | Adopt as base |
+| 2 | blader-humanizer | 23 | Steal voice calibration + convergence |
+| 3 | lguz-humanize-writing-skill | 20 | Steal the opt-out section |
+| 4 | brandonwise-humanizer | 19 | Steal detector taxonomy + vocab tiers |
+| 5 | stephenturner-skill-deslop | 17 | Steal the lean philosophy |
+
+→ **[Recommendation](./comparison/recommendation.md)** · **[Matrix](./comparison/matrix.md)** · **[Exec summary](./comparison/README.md)**
+
 ## What this repo is
 
 - A **review workspace**: each candidate skill is fetched, summarized, and scored against a common rubric.
@@ -28,9 +42,9 @@ The list may grow over time. See `docs/domain-architecture/CONTEXT-MAP.md` for t
 
 ## Repo layout
 
+- [`comparison/`](./comparison/) — **primary outputs**: rubric, matrix, profiles, recommendation (see [`comparison/README.md`](./comparison/README.md) for the exec summary)
 - `PURPOSE.md` — one-paragraph intent
 - `AGENTS.md` — agent guidance for this project
-- `comparison/` — **primary outputs**: rubric, matrix, profiles, recommendation
 - `docs/` — technical + domain architecture, cross-cutting hubs
 - `skills/` — local clones of candidate skills (gitignored, fetched on demand)
 - `tests/` — automated harness: corpus, exercise/score/matrix scripts

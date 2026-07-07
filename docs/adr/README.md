@@ -43,3 +43,4 @@ Why it was chosen.
 ## Index
 
 - [ADR-0001: Initial candidate inventory](0001-initial-candidate-inventory.md) — adopted
+- [ADR-0002: Adopt conorbronsdon-avoid-ai-writing as the personal skill base](0002-adopt-conorbronsdon-as-base.md) — adopted
