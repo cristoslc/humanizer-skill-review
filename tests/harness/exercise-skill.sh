@@ -10,19 +10,20 @@ set -euo pipefail
 cd "$(cd "$(dirname "$0")/../.." && pwd)"
 
 SHORT_NAME="${1:?usage: exercise-skill.sh <short-name>}"
-SKILL_DIR="skills/${SHORT_NAME}"
+TROVE_SRC="docs/troves/humanizer-skills/sources/${SHORT_NAME}"
+SKILL_DIR="skills/${SHORT_NAME}"  # legacy fallback
 RESULTS_DIR="tests/results/${SHORT_NAME}"
 CORPUS_DIR="tests/fixtures/corpus"
 HARNESS_DIR="tests/harness"
 
-if [ ! -d "${SKILL_DIR}" ]; then
-  echo "error: ${SKILL_DIR} not found. Run scripts/fetch-candidates.sh first." >&2
+if [ ! -d "${TROVE_SRC}" ]; then
+  echo "error: ${TROVE_SRC} not found. Run tests/harness/build-trove.py first." >&2
   exit 1
 fi
 
-SKILL_MD=$(find "${SKILL_DIR}" -maxdepth 3 -name 'SKILL.md' -print -quit)
+SKILL_MD=$(find "${TROVE_SRC}" -name 'SKILL.md' -print -quit)
 if [ -z "${SKILL_MD}" ]; then
-  echo "error: no SKILL.md found under ${SKILL_DIR}" >&2
+  echo "error: no SKILL.md found under ${TROVE_SRC}" >&2
   exit 1
 fi
 

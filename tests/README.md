@@ -14,7 +14,7 @@ Automated test harness for the humanizer-skill-review workspace. Exercises each 
 fetch-candidates.sh → exercise-skill.sh → score-outputs.py → build-matrix.py
 ```
 
-1. **Fetch** — `scripts/fetch-candidates.sh` clones candidate repos into `skills/<short-name>/` (gitignored).
+1. **Fetch** — `scripts/fetch-candidates.sh` clones candidate repos into `skills/<short-name>/` (gitignored raw snapshots), then `tests/harness/build-trove.py` mirrors them into the committed trove at `docs/troves/humanizer-skills/`.
 2. **Exercise** — `tests/harness/exercise-skill.sh <short-name>` loads the candidate's SKILL.md, feeds each corpus fixture to `opencode run`, and captures the rewritten output in `tests/results/<short-name>/<fixture>.md`.
 3. **Score** — `tests/harness/score-outputs.py <short-name>` sends each (input, output, SKILL.md, rubric) tuple to an LLM judge via `opencode run`, parses the JSON verdict, and aggregates into `tests/results/<short-name>/scores.json`.
 4. **Matrix** — `tests/harness/build-matrix.py` reads all `scores.json` files and regenerates `comparison/matrix.md`.

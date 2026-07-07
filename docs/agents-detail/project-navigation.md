@@ -50,7 +50,7 @@ flowchart LR
     Decide --> Synthesize["comparison/recommendation.md"]
 ```
 
-1. **Fetch** candidate repos into `skills/<short-name>/` (gitignored).
+1. **Fetch** candidate repos into `skills/<short-name>/` (gitignored raw snapshots), then build the trove at `docs/troves/humanizer-skills/` via `tests/harness/build-trove.py`.
 2. **Profile** each candidate using `comparison/profile-template.md`.
 3. **Score** each against `comparison/rubric.md`; matrix auto-generated into `comparison/matrix.md` by `tests/harness/build-matrix.py`.
 4. **Decide** via an ADR (keep/reject/merge) citing the profile and matrix.

@@ -42,6 +42,10 @@ else
 fi
 
 echo
+echo "=== 1b. Build trove ==="
+python3 ./tests/harness/build-trove.py
+
+echo
 echo "=== 2. Exercise skills ==="
 for c in "${CANDIDATES[@]}"; do
   ./tests/harness/exercise-skill.sh "${c}" || echo "warn: ${c} exercise had failures"

@@ -1,0 +1,38 @@
+trove: humanizer-skills
+created: 2026-07-07
+refreshed: 2026-07-07
+tags:
+  - humanizer
+  - ai-writing
+  - de-slop
+  - agent-skill
+history:
+  - event: created
+    date: 2026-07-07
+    sources: 5
+    sources-added: 5
+    notes: "initial candidate inventory per ADR-0001"
+referenced-by:
+  - artifact: ADR-0001
+    commit: (local)
+sources:
+  - slug: "stephenturner-skill-deslop"
+    url: "https://github.com/stephenturner/skill-deslop"
+    fetched: "2026-07-07T17:56:13Z"
+    sha: "a906154bef375d9d49ed2ad7da13b2db16f0d3d2"
+  - slug: "blader-humanizer"
+    url: "https://github.com/blader/humanizer"
+    fetched: "2026-07-07T17:56:13Z"
+    sha: "1b48564898e999219882660237fde01bf4843a0f"
+  - slug: "brandonwise-humanizer"
+    url: "https://github.com/brandonwise/humanizer"
+    fetched: "2026-07-07T17:56:13Z"
+    sha: "7cf26b0c5a8249d38658a7865e8c7fd4488c082e"
+  - slug: "conorbronsdon-avoid-ai-writing"
+    url: "https://github.com/conorbronsdon/avoid-ai-writing"
+    fetched: "2026-07-07T17:56:13Z"
+    sha: "04394de989c4eef20345543747adbc03a4e048b5"
+  - slug: "lguz-humanize-writing-skill"
+    url: "https://github.com/lguz/humanize-writing-skill"
+    fetched: "2026-07-07T17:56:13Z"
+    sha: "4b7c37fa5148fd499e18498fcc91bb10ed801733"

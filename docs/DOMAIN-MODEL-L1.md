@@ -54,7 +54,7 @@ The workflow that drives evaluation forward.
 
 ### Terms
 
-- **Fetch** — clone a candidate repo into `skills/<short-name>/`.
+- **Fetch** — clone a candidate repo into `skills/<short-name>/` (raw, gitignored), then mirror into the trove at `docs/troves/humanizer-skills/sources/<short-name>/`.
 - **Profile step** — write the per-candidate profile using the template.
 - **Score step** — rate the candidate against each rubric criterion and record in the matrix.
 - **Decision step** — write an ADR (keep/reject/merge) citing the profile and matrix.

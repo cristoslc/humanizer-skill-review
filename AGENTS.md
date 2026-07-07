@@ -8,7 +8,8 @@ See `PURPOSE.md`: compare humanizer skills to inform selection or construction o
 
 ## What agents do here
 
-- **Fetch** candidate skill repos into `skills/<short-name>/` (gitignored). Use `scripts/fetch-candidates.sh`.
+- **Fetch** candidate skill repos into `skills/<short-name>/` (gitignored raw snapshots). Use `scripts/fetch-candidates.sh`.
+- **Build trove** from the raw clones into `docs/troves/humanizer-skills/sources/<short-name>/` using `tests/harness/build-trove.py`. The trove is the committed, reviewed source for evaluation.
 - **Profile** each candidate using `comparison/profile-template.md`. Write the profile to `comparison/profiles/<short-name>.md`.
 - **Score** each candidate against the rubric in `comparison/rubric.md`. Scores are auto-generated into `comparison/matrix.md` by `tests/harness/build-matrix.py`.
 - **Decide** via ADRs in `docs/adr/`. Each keep/reject/merge decision gets a numbered ADR citing the profile and matrix.
@@ -47,7 +48,7 @@ Five initial candidates (see ADR-0001); list may grow:
 ## Conventions
 
 - **Short names**: `<owner>-<repo>` lowercased, hyphenated (e.g. `blader-humanizer`). Used for `skills/` dir, profile filename, and matrix row id.
-- **No redistribution**: do not commit candidate skill source into this repo. `skills/` is gitignored. Reference by SHA in profiles.
+- **No redistribution**: do not commit candidate skill source into this repo. `skills/` is gitignored (raw snapshots only). The committed, reviewed source is the trove at `docs/troves/humanizer-skills/`. Reference by SHA in profiles.
 - **ADRs are immutable once adopted**: supersede, don't edit.
 - **Profiles are mutable**: update as candidates release new versions; note the SHA reviewed.
 - **The matrix is a living doc**: reorder columns freely; keep row order stable once scored.

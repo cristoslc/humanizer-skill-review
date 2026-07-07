@@ -4,14 +4,14 @@ Comparison of open-source "humanizer" / "de-slop" agent skills that remove AI wr
 
 ## Results
 
-Five candidates scored across 10 rubric criteria (3=strongest, 1=weakest). Full matrix and reasoning in [`comparison/`](./comparison/).
+Five candidates scored across 10 rubric criteria (3=strongest, 1=weakest). Judge saw each candidate's SKILL.md **and** full repo context (mirrored in the [`docs/troves/humanizer-skills/`](./docs/troves/humanizer-skills/) trove). Full matrix and reasoning in [`comparison/`](./comparison/).
 
 | Rank | Candidate | /30 | Verdict |
 |---|---|---|---|
-| 1 | **conorbronsdon-avoid-ai-writing** | **28** | Adopt as base |
+| 1 | **conorbronsdon-avoid-ai-writing** | **29** | Adopt as base |
 | 2 | blader-humanizer | 23 | Steal voice calibration + convergence |
-| 3 | lguz-humanize-writing-skill | 20 | Steal the opt-out section |
-| 4 | brandonwise-humanizer | 19 | Steal detector taxonomy + vocab tiers |
+| 2 | brandonwise-humanizer | 23 | Steal detector taxonomy + vocab tiers |
+| 4 | lguz-humanize-writing-skill | 20 | Steal the opt-out section |
 | 5 | stephenturner-skill-deslop | 17 | Steal the lean philosophy |
 
 → **[Recommendation](./comparison/recommendation.md)** · **[Matrix](./comparison/matrix.md)** · **[Exec summary](./comparison/README.md)**
@@ -45,8 +45,8 @@ The list may grow over time. See `docs/domain-architecture/CONTEXT-MAP.md` for t
 - [`comparison/`](./comparison/) — **primary outputs**: rubric, matrix, profiles, recommendation (see [`comparison/README.md`](./comparison/README.md) for the exec summary)
 - `PURPOSE.md` — one-paragraph intent
 - `AGENTS.md` — agent guidance for this project
-- `docs/` — technical + domain architecture, cross-cutting hubs
-- `skills/` — local clones of candidate skills (gitignored, fetched on demand)
+- `docs/` — technical + domain architecture, cross-cutting hubs, and the **candidate trove** at `docs/troves/humanizer-skills/` (mirrored source for evaluation)
+- `skills/` — raw git clones of candidate skills (gitignored; trove is the committed copy)
 - `tests/` — automated harness: corpus, exercise/score/matrix scripts
 - `scripts/staging/` — explains why no staging target exists
 
@@ -62,4 +62,4 @@ The list may grow over time. See `docs/domain-architecture/CONTEXT-MAP.md` for t
 
 ## License
 
-This review repo itself is MIT. Each candidate skill retains its own license — see `skills/<name>/LICENSE` after fetch.
+This review repo itself is MIT. Each candidate skill retains its own license — see `docs/troves/humanizer-skills/sources/<name>/LICENSE`.

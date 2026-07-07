@@ -12,7 +12,7 @@ Integration events that cross bounded context boundaries within the workspace.
 | Consuming context | Candidate Evaluation |
 | Payload | `{ shortName, repoUrl, sha }` |
 | Delivery | In-process (agent workflow) |
-| Meaning | A candidate repo has been cloned into `skills/<short-name>/`. Triggers profiling. |
+| Meaning | A candidate repo has been cloned into `skills/<short-name>/` and mirrored into the trove at `docs/troves/humanizer-skills/`. Triggers profiling. |
 
 ### `CandidateProfiled`
 

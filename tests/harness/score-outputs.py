@@ -37,11 +37,12 @@ def load_template() -> str:
     return (HARNESS / "judge-prompt.md").read_text()
 
 
-def fill(template: str, rubric: str, skill_md: str, input_text: str, output_text: str) -> str:
+def fill(template: str, rubric: str, skill_md: str, repo_context: str, input_text: str, output_text: str) -> str:
     return (
         template
         .replace("{{RUBRIC}}", rubric)
         .replace("{{SKILL_MD}}", skill_md)
+        .replace("{{REPO_CONTEXT}}", repo_context)
         .replace("{{INPUT}}", input_text)
         .replace("{{OUTPUT}}", output_text)
     )
@@ -130,23 +131,29 @@ def main() -> int:
         print("usage: score-outputs.py <short-name>", file=sys.stderr)
         return 1
     short = sys.argv[1]
-    skill_dir = REPO / "skills" / short
+    trove_src = REPO / "docs" / "troves" / "humanizer-skills" / "sources" / short
     results_dir = REPO / "tests" / "results" / short
     corpus_dir = REPO / "tests" / "fixtures" / "corpus"
 
-    if not skill_dir.is_dir():
-        print(f"error: {skill_dir} not found. Run scripts/fetch-candidates.sh first.", file=sys.stderr)
+    if not trove_src.is_dir():
+        print(f"error: {trove_src} not found. Run tests/harness/build-trove.py first.", file=sys.stderr)
         return 1
     if not results_dir.is_dir():
         print(f"error: {results_dir} not found. Run exercise-skill.sh first.", file=sys.stderr)
         return 1
 
-    # Locate SKILL.md
-    candidates = list(skill_dir.rglob("SKILL.md"))
+    # Locate SKILL.md in the trove
+    candidates = list(trove_src.rglob("SKILL.md"))
     if not candidates:
-        print(f"error: no SKILL.md under {skill_dir}", file=sys.stderr)
+        print(f"error: no SKILL.md under {trove_src}", file=sys.stderr)
         return 1
     skill_md = candidates[0].read_text()
+
+    # Gather repo context from the trove
+    repo_context = subprocess.check_output(
+        ["python3", str(REPO / "tests" / "harness" / "repo-context.py"), short],
+        text=True,
+    )
 
     rubric = (REPO / "comparison" / "rubric.md").read_text()
     template = load_template()
@@ -163,7 +170,7 @@ def main() -> int:
             continue
         input_text = input_path.read_text()
         output_text = output_path.read_text()
-        prompt = fill(template, rubric, skill_md, input_text, output_text)
+        prompt = fill(template, rubric, skill_md, repo_context, input_text, output_text)
         print(f"  judging {short} on {stem}...", file=sys.stderr)
         verdict = run_judge(prompt)
         verdict["_fixture"] = stem

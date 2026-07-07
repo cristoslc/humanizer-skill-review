@@ -21,8 +21,9 @@ None. This repo is not gated by a pipeline.
 ## Local dev
 
 ```bash
-# Fetch all candidate skills locally (clones into skills/, which is gitignored)
+# Fetch all candidate skills (clones into skills/, then build the committed trove at docs/troves/humanizer-skills/)
 ./scripts/fetch-candidates.sh
+python3 ./tests/harness/build-trove.py
 
 # Review a candidate: read its SKILL.md, write a profile
 # Score it against comparison/rubric.md, update comparison/matrix.md via the harness

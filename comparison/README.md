@@ -2,21 +2,21 @@
 
 The primary outputs of this repo. Each artifact is a deliverable in the review of humanizer skills.
 
-## Executive summary — round 1 (2026-07-07)
+## Executive summary — round 2 (2026-07-07)
 
-Five open-source humanizer skills were exercised against a fixed 5-passage AI-slop corpus and scored by an LLM judge across 10 rubric criteria (3 = strongest, 1 = weakest).
+Five open-source humanizer skills were exercised against a fixed 5-passage AI-slop corpus and scored by an LLM judge across 10 rubric criteria (3 = strongest, 1 = weakest). The judge saw each candidate's SKILL.md **and** its full repo context (file tree, README, LICENSE, CHANGELOG, CI, tests, git history) mirrored into the trove at `docs/troves/humanizer-skills/`.
 
 | Rank | Candidate | Score /30 | Verdict |
 |---|---|---|---|
-| 1 | **conorbronsdon-avoid-ai-writing** | **28** | Adopt as base |
+| 1 | **conorbronsdon-avoid-ai-writing** | **29** | Adopt as base |
 | 2 | blader-humanizer | 23 | Steal voice calibration + convergence |
-| 3 | lguz-humanize-writing-skill | 20 | Steal the opt-out section |
-| 4 | brandonwise-humanizer | 19 | Steal the detector taxonomy + vocab tiers |
+| 2 | brandonwise-humanizer | 23 | Steal detector taxonomy + vocab tiers |
+| 4 | lguz-humanize-writing-skill | 20 | Steal the opt-out section |
 | 5 | stephenturner-skill-deslop | 17 | Steal the lean philosophy |
 
 **Recommendation:** adopt `conorbronsdon/avoid-ai-writing` as the base for the personal skill at `~/code/output-humanizer-skill/`, then graft on the best ideas from the others. Full reasoning in [`recommendation.md`](./recommendation.md). Scores in [`matrix.md`](./matrix.md).
 
-The decisive differentiators: conorbronsdon is the only candidate with all three modes (rewrite/detect/edit), iterate-to-convergence, and an explicit ethics stance citing academic false-positive research ("signals, not proof").
+The decisive differentiators: conorbronsdon is the only candidate with all three modes (rewrite/detect/edit), iterate-to-convergence, and an explicit ethics stance citing academic false-positive research ("signals, not proof"). With repo context visible, its maturity also scored 3 — 97 commits, CHANGELOG, CONTRIBUTING, CI, detector tests, v3.13.0.
 
 ## Artifacts
 
