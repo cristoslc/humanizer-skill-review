@@ -16,11 +16,19 @@ See `PURPOSE.md`: compare humanizer skills to inform selection or construction o
 
 ## Test command
 
-This is a documentation-only repo with no code to test. There is no automated test suite.
+```bash
+./scripts/run-all.sh
+```
+
+This runs the full automated pipeline: fetch candidates → exercise each skill against the fixed corpus → score outputs with an LLM judge → regenerate the comparison matrix. See `tests/README.md` for details.
+
+Flags:
+- `--skip-fetch` — skip the fetch step (candidates already cloned)
+- `--only <short-name>` — run one candidate only
 
 ## Test command exemption
 
-This project produces no executable code, no library, and no deployable artifact. It is a review workspace containing markdown documents and shell scripts that fetch read-only git repos. Automated tests are not applicable. Verification is by human review of profiles, the comparison matrix, and ADRs.
+This project produces no executable code, no library, and no deployable artifact. The "test suite" is the review harness in `tests/` which exercises candidate skills (not this repo's code) and scores them with an LLM judge. There is no unit-test framework because there is no code under test here. Verification of the review conclusions is by human review of profiles, the comparison matrix, and ADRs; verification of the harness is by running it end-to-end.
 
 ## Project navigation
 

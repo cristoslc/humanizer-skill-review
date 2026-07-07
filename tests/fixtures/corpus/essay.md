@@ -1,0 +1,7 @@
+The question of what makes a society just is not a new one. It has preoccupied thinkers for centuries, and it continues to resonate because the answer is neither static nor settled. Rather, it evolves alongside the societies that ask it.
+
+At its core, justice is about balance — the tension between individual liberty and collective responsibility. Too much of either, and the system falters. It's important to recognize that this balance is not a formula to be solved but a practice to be cultivated. The best societies don't just enforce rules; they nurture the conditions under which fairness can emerge organically.
+
+This is where the concept of equity quietly enters the conversation. Equity is not equality, and conflating the two is a category error that derails more debates than it resolves. Equality treats everyone the same; equity meets people where they are. The distinction is not academic — it is operational, and it shapes everything from policy to practice.
+
+In the final analysis, a just society is not one that has arrived at perfection. It is one that remains honest about its imperfections and committed to the slow, unglamorous work of addressing them. That, perhaps, is the truest measure of progress: not where we stand, but the direction we face.
