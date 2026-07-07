@@ -30,8 +30,10 @@ The list may grow over time. See `docs/domain-architecture/CONTEXT-MAP.md` for t
 
 - `PURPOSE.md` — one-paragraph intent
 - `AGENTS.md` — agent guidance for this project
+- `comparison/` — **primary outputs**: rubric, matrix, profiles, recommendation
 - `docs/` — technical + domain architecture, cross-cutting hubs
 - `skills/` — local clones of candidate skills (gitignored, fetched on demand)
+- `tests/` — automated harness: corpus, exercise/score/matrix scripts
 - `scripts/staging/` — explains why no staging target exists
 
 ## Quickstart

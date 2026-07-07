@@ -14,4 +14,4 @@ Each file is short (3-6 paragraphs) and deliberately saturated with common AI wr
 
 ## Purpose
 
-The corpus is the constant input across all candidates. Outputs land in `tests/results/<short-name>/<fixture-stem>.md`. The LLM judge compares output against input and scores per `docs/plans/rubric.md`.
+The corpus is the constant input across all candidates. Outputs land in `tests/results/<short-name>/<fixture-stem>.md`. The LLM judge compares output against input and scores per `comparison/rubric.md`.

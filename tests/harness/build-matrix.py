@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate docs/plans/comparison-matrix.md from tests/results/*/scores.json.
+"""Regenerate comparison/matrix.md from tests/results/*/scores.json.
 
 Usage: build-matrix.py
 """
@@ -9,7 +9,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 RESULTS = REPO / "tests" / "results"
-MATRIX = REPO / "docs" / "plans" / "comparison-matrix.md"
+MATRIX = REPO / "comparison" / "matrix.md"
 
 # Stable row order matches ADR-0001 inventory.
 ROW_ORDER = [

@@ -1,6 +1,6 @@
 # Recommendation
 
-> **Status:** stub. This document is synthesized once enough candidates have been profiled, scored, and decided. See `docs/adr/` for individual decisions and `comparison-matrix.md` for scores.
+> **Status:** stub. This document is synthesized once enough candidates have been profiled, scored, and decided. See `docs/adr/` for individual decisions and `comparison/matrix.md` for scores.
 
 ## Summary
 

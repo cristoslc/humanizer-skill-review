@@ -27,11 +27,13 @@ Cross-cutting:
 - `docs/USER-EXPERIENCE.md` → `docs/user-experience/`
 - `AGENTS.md` → `docs/agents-detail/`
 - `docs/adr/` — numbered decision records (no hub file)
-- `docs/plans/` — implementation plans and specs (no hub file)
-  - `docs/plans/profiles/` — per-candidate profiles
-  - `docs/plans/rubric.md` — scoring criteria
-  - `docs/plans/comparison-matrix.md` — living scoring table
-  - `docs/plans/recommendation.md` — final synthesis
+- `comparison/` — **primary outputs of the repo** (at the repo root, not under docs/)
+  - `comparison/rubric.md` — scoring criteria
+  - `comparison/matrix.md` — living scoring table (auto-generated)
+  - `comparison/profiles/` — per-candidate profiles
+  - `comparison/profile-template.md` — template for profiles
+  - `comparison/recommendation.md` — final synthesis
+- `docs/plans/` — implementation plans and specs for the review workspace itself (no hub file)
 - `docs/musings/` — pre-artifact thought capture (no hub file)
 - `docs/retros/` — post-session reflection docs from the Retro ritual (no hub file)
 - `docs/tech-debt/` — pre-existing LSP errors and other tech debt (no hub file)
@@ -42,14 +44,14 @@ Read the hub first, then drill into spokes when you need detail.
 
 ```mermaid
 flowchart LR
-    Fetch["scripts/fetch-candidates.sh"] --> Profile["docs/plans/profiles/<name>.md"]
-    Profile --> Score["docs/plans/comparison-matrix.md"]
+    Fetch["scripts/fetch-candidates.sh"] --> Profile["comparison/profiles/<name>.md"]
+    Profile --> Score["comparison/matrix.md"]
     Score --> Decide["docs/adr/000N-*.md"]
-    Decide --> Synthesize["docs/plans/recommendation.md"]
+    Decide --> Synthesize["comparison/recommendation.md"]
 ```
 
 1. **Fetch** candidate repos into `skills/<short-name>/` (gitignored).
-2. **Profile** each candidate using `docs/plans/candidate-profile-template.md`.
-3. **Score** each against `docs/plans/rubric.md`, recording in `docs/plans/comparison-matrix.md`.
+2. **Profile** each candidate using `comparison/profile-template.md`.
+3. **Score** each against `comparison/rubric.md`; matrix auto-generated into `comparison/matrix.md` by `tests/harness/build-matrix.py`.
 4. **Decide** via an ADR (keep/reject/merge) citing the profile and matrix.
-5. **Synthesize** into `docs/plans/recommendation.md` once enough candidates have decisions.
+5. **Synthesize** into `comparison/recommendation.md` once enough candidates have decisions.

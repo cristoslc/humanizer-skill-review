@@ -9,10 +9,10 @@ See `PURPOSE.md`: compare humanizer skills to inform selection or construction o
 ## What agents do here
 
 - **Fetch** candidate skill repos into `skills/<short-name>/` (gitignored). Use `scripts/fetch-candidates.sh`.
-- **Profile** each candidate using `docs/plans/candidate-profile-template.md`. Write the profile to `docs/plans/profiles/<short-name>.md`.
-- **Score** each candidate against the rubric in `docs/plans/rubric.md`. Record scores in the comparison matrix at `docs/plans/comparison-matrix.md`.
+- **Profile** each candidate using `comparison/profile-template.md`. Write the profile to `comparison/profiles/<short-name>.md`.
+- **Score** each candidate against the rubric in `comparison/rubric.md`. Scores are auto-generated into `comparison/matrix.md` by `tests/harness/build-matrix.py`.
 - **Decide** via ADRs in `docs/adr/`. Each keep/reject/merge decision gets a numbered ADR citing the profile and matrix.
-- **Synthesize** the final recommendation into `docs/plans/recommendation.md` once enough candidates are scored.
+- **Synthesize** the final recommendation into `comparison/recommendation.md` once enough candidates are scored.
 
 ## Test command
 
@@ -51,6 +51,7 @@ Five initial candidates (see ADR-0001); list may grow:
 - **ADRs are immutable once adopted**: supersede, don't edit.
 - **Profiles are mutable**: update as candidates release new versions; note the SHA reviewed.
 - **The matrix is a living doc**: reorder columns freely; keep row order stable once scored.
+- **Comparison artifacts are primary outputs**: they live in `comparison/` at the repo root, not under `docs/plans/`.
 
 ## Staging
 

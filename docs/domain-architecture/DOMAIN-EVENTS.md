@@ -22,7 +22,7 @@ Integration events that cross bounded context boundaries within the workspace.
 | Consuming context | Review Process |
 | Payload | `{ shortName, sha, profilePath }` |
 | Delivery | In-process (agent workflow) |
-| Meaning | A profile has been written at `docs/plans/profiles/<short-name>.md`. Triggers scoring. |
+| Meaning | A profile has been written at `comparison/profiles/<short-name>.md`. Triggers scoring. |
 
 ### `CandidateScored`
 
@@ -51,7 +51,7 @@ Integration events that cross bounded context boundaries within the workspace.
 | Producing context | Candidate Evaluation |
 | Consuming context | Output Humanizer Skill (external) |
 | Payload | `{ recommendationPath, summary }` |
-| Delivery | File on disk (`docs/plans/recommendation.md`) |
+| Delivery | File on disk (`comparison/recommendation.md`) |
 | Meaning | The final synthesis is available for consumption by the output skill effort. |
 
 ## Notes

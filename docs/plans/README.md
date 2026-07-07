@@ -1,15 +1,11 @@
 # Plans
 
-Implementation plans, candidate profiles, the scoring rubric, the comparison matrix, and the final recommendation.
+Implementation plans and specs for the review workspace itself — not the comparison outputs (those live in `comparison/` at the repo root).
 
 ## Contents
 
-- `candidate-profile-template.md` — template for per-candidate profiles
-- `rubric.md` — scoring criteria
-- `comparison-matrix.md` — living scoring table (one row per candidate); numeric 1–3 scoring, auto-generated
-- `profiles/` — per-candidate profiles (`<short-name>.md`)
-- `recommendation.md` — final synthesis (stub until enough candidates are scored)
+(none yet)
 
 ## Lifecycle
 
-Plans are mutable working documents. Once a candidate is decided, its profile is reference material for the corresponding ADR.
+Plans are mutable working documents. Once a plan is acted on, it becomes an ADR or a comparison artifact.

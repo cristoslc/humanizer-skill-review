@@ -148,7 +148,7 @@ def main() -> int:
         return 1
     skill_md = candidates[0].read_text()
 
-    rubric = (REPO / "docs" / "plans" / "rubric.md").read_text()
+    rubric = (REPO / "comparison" / "rubric.md").read_text()
     template = load_template()
 
     verdicts = []

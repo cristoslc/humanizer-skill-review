@@ -58,4 +58,4 @@ echo "=== 4. Regenerate matrix ==="
 python3 ./tests/harness/build-matrix.py
 
 echo
-echo "=== Done. See docs/plans/comparison-matrix.md ==="
+echo "=== Done. See comparison/matrix.md ==="

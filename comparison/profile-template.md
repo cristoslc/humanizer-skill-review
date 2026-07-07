@@ -62,4 +62,4 @@ What is not worth taking, and why?
 
 ## Scores (summary)
 
-See `comparison-matrix.md` for full scores. Summary: <one-line verdict>.
+See `comparison/matrix.md` for full scores. Summary: <one-line verdict>.

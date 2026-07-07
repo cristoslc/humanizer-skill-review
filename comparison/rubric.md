@@ -1,6 +1,6 @@
 # Scoring Rubric
 
-Each candidate is scored against the criteria below. Scores are integers 1–3 (3 is strongest, 1 is weakest), or 0 if the criterion does not apply. The LLM judge assigns a score per criterion per fixture; the aggregator takes the mean and modal rating across the 5 fixtures. Record in `comparison-matrix.md`.
+Each candidate is scored against the criteria below. Scores are integers 1–3 (3 is strongest, 1 is weakest), or 0 if the criterion does not apply. The LLM judge assigns a score per criterion per fixture; the aggregator takes the mean and modal rating across the 5 fixtures. Record in `comparison/matrix.md`.
 
 ## Criteria
 

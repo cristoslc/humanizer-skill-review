@@ -25,7 +25,7 @@ None. This repo is not gated by a pipeline.
 ./scripts/fetch-candidates.sh
 
 # Review a candidate: read its SKILL.md, write a profile
-# Score it against docs/plans/rubric.md, update docs/plans/comparison-matrix.md
+# Score it against comparison/rubric.md, update comparison/matrix.md via the harness
 # Record the decision in docs/adr/
 ```
 
