@@ -1,5 +1,0 @@
-This is **technical writing** (API documentation for `parse_config()` — parameter specs, return types, exception docs, code example). The skill explicitly says **do not apply** to technical writing:
-
-> *"Technical writing (API docs, specifications, READMEs) — clarity and consistency are the goal, not voice"*
-
-Humanizing this would introduce inappropriate informality and reduce its value as reference documentation. No changes needed — the text is doing exactly what it should.

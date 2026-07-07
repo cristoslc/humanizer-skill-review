@@ -1,5 +1,0 @@
-This is **technical writing** (API documentation / docstring) — the skill explicitly says not to apply to this category:
-
-> **Technical writing** (API docs, specifications, READMEs) — clarity and consistency are the goal, not voice
-
-The text is a clean, conventional Python docstring. Applying humanization would introduce informality that hurts clarity (e.g., replacing "Returns an empty dict" with something less precise). Do you want to proceed anyway, or should I skip?

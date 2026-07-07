@@ -1,5 +1,0 @@
-This text is **technical documentation** (a function docstring with parameters, returns, raises, and an example). Per the skill's own rules:
-
-> **Do NOT apply this skill to: Technical writing** (API docs, specifications, READMEs) — clarity and consistency are the goal, not voice.
-
-Humanizing this would introduce inappropriate informality and reduce clarity. The text is already well-suited to its purpose. No changes needed.

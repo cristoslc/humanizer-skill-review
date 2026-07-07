@@ -1,8 +1,0 @@
-**Edits made:**
-
-1. **Line 1** — `Edit the file at /tmp/draft.md in place.` → `Edit /tmp/draft.md.`
-   - Removed wordy filler ("the file at", "in place" — redundant with EDIT mode)
-
-**Verification:** Re-read the file. The remaining text is direct instructional prose with no AI tells. No em dashes, no hedging, no template phrases. Patterns resolved.
-
-**Ethics note:** These are signals, not proof. False positives are possible, especially for non-native English writers.

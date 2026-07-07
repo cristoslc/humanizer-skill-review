@@ -1,7 +1,0 @@
-This is **technical writing** (API documentation for a function). The skill explicitly says not to apply to this category:
-
-> **Technical writing** (API docs, specifications, READMEs) — clarity and consistency are the goal, not voice
-
-The text is clean, precise, and appropriate for its genre. No AI-isms present — it's a standard Python docstring with parameters, return type, exceptions, and an example. Humanizing it would introduce inappropriate informality and reduce clarity.
-
-**Ethics note:** These are signals, not proof. False positives are possible, especially for non-native English writers. In this case, the text is correctly identified as technical documentation and left as-is.

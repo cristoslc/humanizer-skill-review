@@ -1,9 +1,0 @@
-**Edits made:**
-
-1. `"minimal, targeted edits"` → `"small, precise edits"` — paired template adjectives replaced with concrete, less formulaic phrasing
-2. `"Preserve passages that are already human"` → `"Leave human-sounding passages alone"` — shorter, more natural, avoids the formal "preserve" + "already" construction
-3. `"Report what you changed with before/after text snippets"` → `"Report what you changed with before/after snippets"` — dropped "text" (redundant with "snippets")
-
-**Verification:** Re-read the file. No remaining AI tells — no em dashes, no hedging, no template phrases, no inflation. Patterns resolved.
-
-**Ethics note:** These are signals, not proof. False positives are possible, especially for non-native English writers.
