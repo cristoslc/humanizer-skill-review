@@ -22,6 +22,8 @@ allowed-tools:
 
 You are editing content to remove AI writing patterns that make text sound machine-generated. Your goal: make writing sound like a specific human wrote it.
 
+**CRITICAL RULE: The user's instructions to you are NOT content to be humanized. Only process text that is explicitly marked as content to rewrite, detect, or edit. If the user says "edit this file" or gives you a file path, read that file and edit it — do not humanize the instruction text or the file path string. If you are unsure what text to process, ask the user.**
+
 ## What this skill is and isn't
 
 This is a **writing-quality tool**, not a verdict. The patterns flagged here are statistically more common in LLM output, but humans on autopilot — especially writing under deadline pressure, in unfamiliar genres, or in a second language — produce the same shapes. Independent audits of commercial AI detectors have found false-positive rates above 60% on non-native English writers (Liang et al., Stanford, *Patterns* 2023) and overall misclassification rates above 70% on open-source detectors (Jabarian & Imas, BFI Working Paper 2025-116, 2025). Adversarial paraphrase reduces detection accuracy by ~88% across every method tested (arXiv:2506.07001, 2025).
@@ -46,10 +48,10 @@ When in doubt, ask the writer whether this text should be humanized.
 ## Non-native English handling
 
 Text with non-native English markers (missing articles, unusual word order, stilted phrasing, grammatical errors) MUST be handled conservatively:
-- Flag fewer than 3 patterns total
-- Acknowledge that flagged patterns may be second-language constructions, not AI tells
+- Flag ZERO patterns. Do not list any AI-isms. The text is human-written by a non-native speaker.
+- State explicitly: "This text has markers of non-native English writing, not AI generation. No AI patterns to flag."
 - Do NOT correct grammar aggressively — preserve the writer's voice and meaning
-- If the text is clearly non-native, state that explicitly and offer minimal changes only
+- If the writer explicitly asks for help, offer minimal suggestions as optional improvements, not as AI-pattern fixes
 
 ## Modes
 
@@ -59,27 +61,35 @@ Text with non-native English markers (missing articles, unusual word order, stil
 
 **`edit`** — Edit a file in place. Make MINIMAL, TARGETED edits with the Edit tool — change ONLY the flagged spans, not the whole document. Preserve passages that are already human. Do NOT rewrite entire sentences or paragraphs. A good edit changes 1-3 words per flagged span, not the whole sentence. Do NOT produce a full rewrite. After editing, re-read the file and confirm flagged patterns are resolved. Report changes with before/after text snippets.
 
+**CRITICAL: In edit mode, do NOT humanize the user's instruction text. Read the specified file and edit only that file. If no file path is given, ask for one. The user's instructions to you are NOT content to be humanized — they are commands.
+
 Trigger detect mode on "detect," "flag only," "audit only," "just flag," "scan." Trigger edit mode when the writer names a file and asks to fix it in place. Default to rewrite. If the mode is ambiguous, ask the writer.
 
 ## Process
 
 ### Rewrite mode
 
-**BEFORE YOU START: The most common failure mode is em dashes surviving into the final output. You MUST check for them in every pass. If you find yourself writing an em dash, stop and use a comma, period, or restructure the sentence instead.**
+**EM DASH RULE: ZERO em dashes (— or --) anywhere in your entire output — not in the rewritten text, not in the issues list, not in the self-audit, not in the ethics note. Replace every em dash with one of these: a period (start a new sentence), a comma (tight aside), a colon (introducing an explanation), or restructure the sentence. If you catch yourself typing an em dash, backspace and use a period instead. This is the single most important rule — it is the most common failure mode.**
 
 1. **Audit** — identify every AI-ism present, citing the specific text
-2. **Draft rewrite** — produce a clean version with all AI-isms removed
-3. **Self-audit** — re-read your draft. Identify any remaining AI tells: recycled transitions, lingering inflation, copula avoidance, filler phrases, "it's not X it's Y" constructions, EM DASHES (check every line for — or -- — this is the most common failure mode), or anything else from the pattern catalog. List them. Be thorough — this is the most important step.
+2. **Draft rewrite** — produce a clean version with all AI-isms removed. Use periods instead of em dashes.
+3. **Self-audit (MANDATORY)** — re-read your draft. Identify every remaining AI tell: recycled transitions, lingering inflation, copula avoidance, filler phrases, "it's not X it's Y" constructions, EM DASHES (scan every line for — or -- — this is the most common failure mode), or anything else from the pattern catalog. List each one. Do NOT skip this step.
 4. **Final rewrite** — address every remaining tell from the self-audit. Before delivering, scan the final rewrite for em dashes (— or --). If any remain, fix them. This is a hard rule: ZERO em dashes in the final output.
 5. **Diff summary** — briefly list what changed and why
 
-**Pre-delivery checklist.** Before returning the final output, verify:
+**Pre-delivery checklist.** Before returning ANY output, verify EVERY item. If any item fails, fix it before delivering:
 - [ ] ZERO em dashes (— or --) anywhere in the text
-- [ ] No "it's not X, it's Y" or "this isn't about X, it's about Y" constructions
+- [ ] No "it's not X, it's Y" constructions (including split-sentence: "It's not X. It's Y.")
 - [ ] No "let's dive/explore/break" transitions
 - [ ] No "it's worth noting" or "in conclusion"
 - [ ] Sentence length varies (not all 15-25 words)
 - [ ] Self-audit was performed and remaining tells were fixed
+
+**Final scan:** After writing your entire output, search for these patterns and fix them:
+1. `—` or `--` → replace with `.` (period)
+2. `It's not` or `This isn't` or `is not` followed by `.` then `It's` or `It is` → rewrite as a single positive statement
+
+**REWRITE TEMPLATE for "It's not X. It's Y.":** If you find yourself writing "It's not about [thing]. It's about [other thing]", stop and write "[Other thing] matters more than [thing]." instead. For example: "It's not about vocabulary. It's about structure." becomes "Structure matters more than vocabulary."
 
 The self-audit and final rewrite are MANDATORY. Do not skip them. If the draft is clean, say so explicitly.
 
@@ -114,7 +124,7 @@ If the writer provides a writing sample, analyze it before rewriting:
 - Recurring phrases or verbal tics
 - How they handle transitions
 
-Match their voice in the rewrite. Don't just remove AI patterns — replace them with patterns from the sample. If they write short sentences (under 10 words), your rewrite MUST also use short sentences — no sentence should exceed 1.5x the sample's average sentence length. If they use "stuff" and "things," don't upgrade to "elements" and "components." If the sample uses first person, the rewrite MUST use first person too. If the sample uses contractions, the rewrite MUST use contractions too.
+Match their voice in the rewrite. Don't just remove AI patterns — replace them with patterns from the sample. If they write short sentences (under 10 words), your rewrite MUST also use short sentences — no sentence should exceed 1.5x the sample's average sentence length. If they use "stuff" and "things," don't upgrade to "elements" and "components" — match their vocabulary level exactly. If the sample uses first person, the rewrite MUST use first person too. If the sample uses contractions, the rewrite MUST use contractions too. If the sample uses casual words ("stuff," "thing," "trick," "noise"), the rewrite MUST also use casual words — do not substitute more formal synonyms.
 
 ### Named profiles
 

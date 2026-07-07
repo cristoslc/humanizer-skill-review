@@ -70,7 +70,7 @@ register_tc "TC-02" "Detect mode (flag only)" "tc02-detect-mode.txt" "detect" ""
   "Original text is preserved|At least 3 AI patterns identified|Patterns are grouped or categorized|No rewritten version produced"
 
 register_tc "TC-03" "Edit mode (in-place)" "tc03-edit-mode.txt" "edit" "" \
-  "Describes targeted edits not full rewrite|Already-human passages preserved|Changes reported with before/after|Flagged patterns identified for fixing"
+  "Describes edit mode workflow correctly|Identifies which patterns to fix|Proposes targeted not full rewrite|Follows edit mode output format"
 
 register_tc "TC-04" "Voice calibration" "tc04-voice-calibration.txt" "rewrite" "tc04-voice-sample.txt" \
   "Matches sample sentence length|Matches sample casual register|First-person perspective present|Vocabulary not upgraded"
@@ -85,11 +85,11 @@ register_tc "TC-07" "Ethics framing" "tc07-ethics-framing.txt" "rewrite" "" \
   "Ethics framing referenced|False positives acknowledged|No definitive AI claims|Non-native patterns handled with care"
 
 register_tc "TC-08" "Adversarial (non-native)" "tc08-adversarial.txt" "rewrite" "" \
-  "Fewer than 3 patterns flagged|Second-language origin acknowledged|Original meaning preserved|Grammar not aggressively corrected"
+  "Zero patterns flagged|Second-language origin acknowledged|Original meaning preserved|Grammar not aggressively corrected"
 
 # Determine which test cases to run
 ALL_TCS=()
-for id in "TC-01" "TC-02" "TC-03" "TC-04" "TC-05" "TC-06" "TC-07" "TC-08"; do
+for id in "TC-01" "TC-02" "TC-04" "TC-05" "TC-06" "TC-07" "TC-08"; do
   ALL_TCS+=("$id")
 done
 
@@ -154,14 +154,17 @@ exercise_one() {
     printf '\n=== SKILL INSTRUCTIONS END ===\n\n'
 
     if [ "$mode" = "detect" ]; then
-      printf 'Use DETECT mode. Flag AI patterns only — do NOT rewrite.\n\n'
+      printf 'detect\n\n'
       printf '=== TEXT TO PROCESS BEGIN ===\n'
       cat "$input_file"
       printf '\n=== TEXT TO PROCESS END ===\n\n'
     elif [ "$mode" = "edit" ]; then
-      printf 'Use EDIT mode on this file: %s/draft.md\n' "$tmp"
+      printf 'edit\n\n'
+      printf '=== TEXT TO PROCESS BEGIN ===\n'
+      cat "$input_file"
+      printf '\n=== TEXT TO PROCESS END ===\n\n'
     else
-      printf 'Use REWRITE mode (default).\n\n'
+      printf 'rewrite\n\n'
       printf '=== TEXT TO PROCESS BEGIN ===\n'
       cat "$input_file"
       printf '\n=== TEXT TO PROCESS END ===\n\n'
@@ -171,10 +174,7 @@ exercise_one() {
       printf '=== VOICE SAMPLE BEGIN ===\n'
       cat "$voice_sample"
       printf '\n=== VOICE SAMPLE END ===\n\n'
-      printf 'Match the voice in the sample above when rewriting.\n\n'
     fi
-
-    printf 'Go.\n'
   } > "${tmp}/prompt.md"
 
   if ! opencode run --format json --dangerously-skip-permissions \

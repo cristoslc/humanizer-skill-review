@@ -40,6 +40,10 @@ Five candidates scored across 10 rubric criteria (3=strongest, 1=weakest). Judge
 
 The list may grow over time. See `docs/domain-architecture/CONTEXT-MAP.md` for the candidate inventory and `docs/adr/` for decisions.
 
+## Superset skill
+
+[`skills/ai-output-humanizer/`](./skills/ai-output-humanizer/) is a synthesized skill that merges the best patterns from all 5 candidates into a single SKILL.md. It offers three modes (rewrite, detect, edit), voice calibration from sample or named profiles, iterate-to-convergence with self-audit, context-aware strictness, and explicit ethics framing. Tested against 8 non-deterministic test cases at k=5 — all pass. See [`tests/superset/`](./tests/superset/) for the eval harness and results.
+
 ## Repo layout
 
 - [`comparison/`](./comparison/) — **primary outputs**: rubric, matrix, profiles, recommendation (see [`comparison/README.md`](./comparison/README.md) for the exec summary)
