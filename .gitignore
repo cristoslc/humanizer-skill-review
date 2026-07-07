@@ -1,0 +1,21 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Worktrees
+.worktrees/
+
+# Candidate skill clones (fetched on demand, not redistributed)
+skills/*
+!skills/.gitkeep
+
+# Temp
+*.log
+*.tmp
