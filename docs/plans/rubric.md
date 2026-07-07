@@ -1,6 +1,6 @@
 # Scoring Rubric
 
-Each candidate is scored against the criteria below. Scores are `low`, `med`, `high`, or `n/a` (criterion does not apply). Record in `comparison-matrix.md`.
+Each candidate is scored against the criteria below. Scores are integers 1–3 (3 is strongest, 1 is weakest), or 0 if the criterion does not apply. The LLM judge assigns a score per criterion per fixture; the aggregator takes the mean and modal rating across the 5 fixtures. Record in `comparison-matrix.md`.
 
 ## Criteria
 
@@ -46,7 +46,7 @@ Is the skill lean enough to load cheaply, or is it bloated? Lines of SKILL.md is
 
 ## Scoring guide
 
-- `high` — strongly meets the criterion; best-in-class.
-- `med` — meets the criterion adequately; room for improvement.
-- `low` — weakly meets or misses the criterion.
-- `n/a` — criterion does not apply to this candidate.
+- `3` — strongly meets the criterion; best-in-class.
+- `2` — meets the criterion adequately; room for improvement.
+- `1` — weakly meets or misses the criterion.
+- `0` — criterion does not apply to this candidate.

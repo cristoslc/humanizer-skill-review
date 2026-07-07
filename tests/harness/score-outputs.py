@@ -89,7 +89,8 @@ def run_judge(prompt: str) -> dict:
 def aggregate(verdicts: list[dict]) -> dict:
     """Aggregate per-fixture verdicts into a single scores document.
 
-    For each criterion, pick the modal rating across fixtures and join rationales.
+    For each criterion, take the mean of integer ratings across fixtures
+    (rounded to 1 decimal place) and collect rationales.
     """
     agg = {}
     for crit in CRITERIA:
@@ -98,22 +99,26 @@ def aggregate(verdicts: list[dict]) -> dict:
         for v in verdicts:
             s = v.get("scores", {}).get(crit, {})
             r = s.get("rating")
-            if r:
-                ratings.append(r)
+            if r is not None and r != "":
+                try:
+                    ratings.append(int(r))
+                except (ValueError, TypeError):
+                    pass
             rat = s.get("rationale")
             if rat:
                 rationales.append(rat)
         if not ratings:
-            agg[crit] = {"rating": "n/a", "rationale": "no verdicts collected"}
+            agg[crit] = {"rating": 0, "mean": 0.0, "rationale": "no verdicts collected"}
             continue
-        # Modal rating, with high > med > low precedence on ties
-        order = {"high": 3, "med": 2, "low": 1, "n/a": 0}
+        mean = sum(ratings) / len(ratings)
+        # Modal rating for display; mean for tie-breaking and nuance
         counts = {}
         for r in ratings:
             counts[r] = counts.get(r, 0) + 1
-        top = sorted(counts.items(), key=lambda kv: (kv[1], order.get(kv[0], 0)), reverse=True)
+        modal = max(counts.items(), key=lambda kv: (kv[1], kv[0]))[0]
         agg[crit] = {
-            "rating": top[0][0],
+            "rating": modal,
+            "mean": round(mean, 2),
             "rationale": " | ".join(rationales[:3]) if rationales else "",
             "per_fixture": ratings,
         }

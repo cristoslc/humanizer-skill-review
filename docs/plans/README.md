@@ -6,7 +6,7 @@ Implementation plans, candidate profiles, the scoring rubric, the comparison mat
 
 - `candidate-profile-template.md` — template for per-candidate profiles
 - `rubric.md` — scoring criteria
-- `comparison-matrix.md` — living scoring table (one row per candidate)
+- `comparison-matrix.md` — living scoring table (one row per candidate); numeric 1–3 scoring, auto-generated
 - `profiles/` — per-candidate profiles (`<short-name>.md`)
 - `recommendation.md` — final synthesis (stub until enough candidates are scored)
 
