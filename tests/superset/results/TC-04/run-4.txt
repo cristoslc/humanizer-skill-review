@@ -1,0 +1,33 @@
+**Issues found:**
+- "In today's rapidly evolving digital landscape" — Tier 1 template opener
+- "it's important to note that" — Tier 1 hedging filler
+- "more critical than ever" — Tier 1 inflation
+- "Whether you're a seasoned professional or just starting out" — Tier 2 binary template
+- "make or break your success" — Tier 2 cliché
+- "Let's dive into" — Tier 1 transition phrase
+- "It's not just about... rather, it's about" — Tier 1 false concession structure
+- "crafting a narrative that resonates" — Tier 1 template
+- "they craft, they hone, they iterate" — Tier 2 compulsive rule of three
+- "This trifecta of habits" — Tier 1 self-labeling significance
+- "what separates good from great" — Tier 2 cliché
+- Em dash in "don't just write — they craft" — formatting tell
+
+**Rewritten version:**
+
+I've been thinking about writing lately. Most advice about it is noise. People hand you rules like they're handing out candy. But rules don't make you a better writer. Reading does. Writing does. Throwing away the bad stuff does.
+
+Here's the thing about communication. If you can't say it clearly, it doesn't matter how smart you are. Doesn't matter if you're new or you've been at it for years. What matters is whether people actually get what you're saying.
+
+Write like you talk. Cut the fluff. Say what you mean. That's it. That's the whole thing.
+
+**What changed:**
+- Replaced the template opener with a direct first-person opening matching your sample
+- Cut all hedging, inflation, and transition phrases
+- Replaced the rule-of-three and false-concession with short declarative sentences
+- Matched your sentence length (most under 12 words)
+- Used fragments ("Doesn't matter if...") like your sample does
+- Closed with the same "That's it. That's the whole thing." rhythm you used
+
+**Second-pass audit:** Clean. No em dashes, no hedging, no template phrases, no inflation. Sentence lengths match your sample. Voice is consistent.
+
+**Ethics note:** These are signals, not proof. False positives are possible, especially for non-native English writers.

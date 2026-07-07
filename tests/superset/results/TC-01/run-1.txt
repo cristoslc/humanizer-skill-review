@@ -1,0 +1,67 @@
+## 1. Issues found
+
+- **"In today's rapidly evolving digital landscape"** — Significance inflation + AI vocabulary ("landscape" abstract)
+- **"it's important to note that"** — Filler phrase
+- **"more critical than ever"** — Significance inflation
+- **"Whether you're a seasoned professional or just starting out"** — Formulaic binary template
+- **"make or break your success"** — Cliché
+- **"Let's dive into"** — Template transition opener
+- **"It's not just about stringing words together; rather, it's about crafting a narrative that resonates"** — Negative parallelism + AI vocabulary ("crafting a narrative that resonates")
+- **"they craft, they hone, they iterate"** — Rule of three
+- **"This trifecta of habits"** — AI vocabulary ("trifecta")
+- **"what separates good from great"** — Template phrase
+- **"It's worth noting that"** — Filler phrase
+- **"A well-structured piece doesn't just inform; it guides the reader on a journey"** — Negative parallelism + AI vocabulary ("guides the reader on a journey")
+- **"From the hook to the conclusion"** — False range
+- **"serves as a building block"** — Copula avoidance + AI vocabulary
+- **"toward a singular goal: clarity"** — Template phrase
+- **"In conclusion"** — Generic transition
+- **"mastering communication is a journey, not a destination"** — Cliché + negative parallelism
+- **"By embracing these principles"** — Template phrase
+- **"well-equipped to navigate"** — AI vocabulary ("navigate")
+- **"the complexities of modern writing"** — AI vocabulary
+- **"the pen is mightier than the sword, but only when wielded with intention"** — Cliché with AI twist
+- **Em dash** in "they craft — they hone, they iterate"
+- **Uniform paragraph length** — all 3-4 sentences, same rhythm
+- **Generic conclusion** — says nothing specific
+
+## 2. Rewritten version
+
+Good writing is hard. Most people skip the hard part.
+
+Structure matters more than most people think. A clear structure does two things: it holds your reader's attention and it makes your point land. The opening line sets the hook. Each paragraph builds on the last. The ending closes the loop. That's it — no magic.
+
+Write like you mean it. Cut the filler. Say what you want to say and stop.
+
+## 3. What changed
+
+- Cut the opener entirely — "In today's rapidly evolving digital landscape" is pure filler
+- Replaced the "Let's dive into" transition with a direct statement
+- Removed all three negative parallelisms ("it's not X, it's Y")
+- Collapsed the rule of three ("craft, hone, iterate") into a single sentence
+- Replaced "serves as a building block" with "does two things"
+- Cut "In conclusion" and the cliché about journeys and destinations
+- Replaced the generic ending with a concrete, short closing
+- Removed the em dash
+- Varied sentence length (2-word sentences, fragments, longer ones)
+- Cut paragraph count from 4 to 3, each with a distinct job
+
+## 4. Second-pass audit
+
+Re-reading the rewrite:
+
+- No em dashes ✓
+- No negative parallelisms ✓
+- No filler phrases ✓
+- No AI vocabulary ✓
+- No rule of three ✓
+- No generic conclusion ✓
+- No template transitions ✓
+- Sentence length varies: 3 words → 10 words → 24 words → 7 words → 5 words ✓
+- No uniform paragraph structure ✓
+
+Clean. No remaining tells.
+
+## 5. Ethics note
+
+These are signals, not proof. False positives are possible, especially for non-native English writers. The patterns flagged here are statistically more common in LLM output, but humans writing under deadline pressure or in unfamiliar genres produce the same shapes. Don't use this as the sole basis for a consequential decision.

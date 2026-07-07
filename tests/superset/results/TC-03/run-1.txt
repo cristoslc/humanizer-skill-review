@@ -1,0 +1,11 @@
+**Edits made:**
+
+1. `"Make minimal, targeted edits to fix AI writing patterns"` → `"Fix AI writing patterns with minimal edits"` — removed "targeted" (Tier 2 inflated vocabulary)
+
+2. `"Preserve passages that are already human"` → `"Keep passages that already read human"` — "preserve" → "keep" (simpler verb), "are already human" → "already read human" (more natural phrasing)
+
+3. `"Report what you changed with before/after text snippets"` → `"Report changes with before/after snippets"` — cut filler ("what you"), cut redundant "text"
+
+**Verification:** Re-read confirms all flagged patterns resolved. No em dashes, no hedging, no inflated vocabulary remain.
+
+**Ethics note:** These are signals, not proof. False positives are possible, especially for non-native English writers.

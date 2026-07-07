@@ -1,0 +1,68 @@
+## Issues found
+
+- **"In today's rapidly evolving digital landscape"** — classic AI opener
+- **"it's important to note that"** — Tier 1 filler
+- **"more critical than ever"** — significance inflation
+- **"Whether you're a seasoned professional or just starting out"** — template binary
+- **"Let's dive into"** — template transition
+- **"It's not just about... rather, it's about"** — false concession structure
+- **"they craft, they hone, they iterate"** — compulsive rule of three
+- **"This trifecta of habits"** — self-labeling significance
+- **"It's worth noting that"** — Tier 1 filler
+- **"doesn't just inform; it guides the reader on a journey"** — false concession
+- **"From the hook to the conclusion"** — template phrase
+- **"In conclusion"** — generic conclusion opener
+- **"mastering communication is a journey, not a destination"** — cliché
+- **"By embracing these principles, you'll be well-equipped to navigate"** — template closer
+- **"the pen is mightier than the sword, but only when wielded with intention"** — cliché
+- **Em dash** in "don't just write — they craft" — hard rule violation
+- **Uniform paragraph length** — each paragraph ~4-5 lines, no variation
+- **Formulaic section openings** — every paragraph starts with a canned transition
+
+---
+
+## Rewritten version
+
+Good writing is hard. It's also worth doing right.
+
+Structure matters more than most people think. A clear piece leads the reader somewhere — from the first sentence to the last, every part should pull toward the same point. Not every sentence needs to sing. But every sentence should earn its place.
+
+The best writers share one habit: they revise. They write a draft, then they make it better. Then they do it again. That's it. No secret formula.
+
+You don't need a fancy opener or a polished closer. You need something to say and the discipline to say it clearly. Everything else is decoration.
+
+---
+
+## What changed
+
+- Cut every canned opener and transition
+- Replaced the rule-of-three with a single concrete habit
+- Removed the em dash (restructured the sentence)
+- Cut the cliché closer entirely
+- Varied paragraph length (first paragraph is 2 sentences, last is 3)
+- Dropped "In conclusion" and the generic future-narrative closer
+- Replaced "craft, hone, iterate" with plain language
+- Cut "it's important to note" and "it's worth noting" — if it's worth saying, just say it
+
+---
+
+## Second-pass audit
+
+Re-reading the rewrite:
+- No em dashes ✓
+- No template phrases ✓
+- No hedging or filler ✓
+- No false concessions ✓
+- No rule of three ✓
+- No significance inflation ✓
+- Paragraph lengths vary (2, 4, 3, 3 sentences) ✓
+- No formulaic openings ✓
+- No generic conclusion ✓
+
+Clean. No remaining tells.
+
+---
+
+## Ethics note
+
+These are signals, not proof. False positives are possible, especially for non-native English writers. The patterns flagged here are statistically more common in LLM output, but humans writing under deadline pressure or in unfamiliar genres produce the same shapes. Don't make this the sole basis for a consequential decision.

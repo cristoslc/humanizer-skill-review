@@ -1,0 +1,41 @@
+## Issues found
+
+- **"In today's rapidly evolving digital landscape"** — Tier 1 template opener, the most overused AI phrase in existence
+- **"it's important to note that"** — Tier 1 filler, adds nothing
+- **"more critical than ever"** — Tier 1 significance inflation
+- **"seasoned professional"** — Tier 2 cliché
+- **"make or break your success"** — Tier 2 cliché
+- **"Let's dive into"** — Tier 1 template transition
+- **"It's not just about... rather, it's about"** — Tier 1 false concession structure
+- **"crafting a narrative that resonates"** — Tier 2 vague filler
+- **"they craft, they hone, they iterate"** — Tier 2 compulsive rule of three
+- **"trifecta of habits"** — Tier 2 forced vocabulary
+- **"separates good from great"** — Tier 2 cliché
+- **Em dashes** — present in the original
+
+## Rewritten version
+
+I've been thinking about writing for a while. The thing is, most people overcomplicate it. They talk about landscapes and narratives and trifectas. But that's just noise.
+
+Here's what matters. Write clearly. Say what you mean. Cut the rest.
+
+Good writers don't have a secret formula. They read a lot, they write a lot, and they throw most of it away. The stuff that survives is what works.
+
+## What changed
+
+- Cut the generic AI opener entirely
+- Replaced inflated vocabulary with plain speech matching the sample
+- Matched sentence length to sample (short, punchy, ~8 words avg)
+- Used first person and "the thing is" to mirror the sample's voice
+- Used fragments and direct address
+- Replaced the "it's not X it's Y" construction with a direct statement
+- Collapsed the rule of three / "trifecta" into one flat sentence
+- Removed em dashes
+
+## Second-pass audit
+
+Clean. No remaining AI tells. Sentence length matches the sample. No em dashes. No hedging. No inflation. No template phrases. The voice is consistent with the sample — direct, short, conversational, opinionated.
+
+## Ethics note
+
+These are signals, not proof. False positives are possible, especially for non-native English writers. The patterns flagged here are statistically more common in LLM output, but humans under deadline pressure or writing in unfamiliar genres produce the same shapes. Pair the signal with context.

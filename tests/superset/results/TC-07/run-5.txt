@@ -1,0 +1,25 @@
+1. **Issues found:**
+   - **Hedging (P1):** "I think", "Maybe there are some areas where we can improve", "could be more clear"
+   - **Low information density (P2):** "very good", "positive feedback", "working well" — no specifics
+   - **Generic conclusion (P2):** "But overall I am satisfied with the progress"
+   - **Non-native marker (not an AI tell):** "Many problems we faced" — inverted word order typical of second-language English
+
+2. **Rewritten version:**
+
+I've been working on this project for three months. The results look good. We faced plenty of problems and solved them one by one. My team worked hard, and we're happy with what we've built. The system works. Users like it.
+
+Some areas still need work. The documentation could be clearer. A few features aren't done yet. But I'm satisfied with the progress.
+
+3. **What changed:**
+   - Cut "I think" and "Maybe" — removed hedging
+   - "very good" → "good" — removed inflation
+   - "step by step" → "one by one" — more natural
+   - "working well and users are giving positive feedback" → "works. Users like it." — direct, concrete
+   - "Maybe there are some areas where we can improve" → "Some areas still need work" — direct
+   - "could be more clear" → "could be clearer" — minor grammar fix
+   - "But overall I am satisfied" → "But I'm satisfied" — cut filler, added contraction
+   - Preserved the non-native construction's meaning without aggressive correction
+
+4. **Second-pass audit:** Clean. No em dashes. No hedging. No generic conclusions. No AI vocabulary. Voice is direct and human.
+
+5. **Ethics note:** These are signals, not proof. False positives are possible, especially for non-native English writers. The hedging and vague language flagged here are common in both AI output and human writing under deadline pressure or in a second language. The inverted word order ("Many problems we faced") is a non-native English marker, not an AI tell.

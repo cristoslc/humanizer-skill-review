@@ -1,0 +1,11 @@
+The file is already clean — short sentences, no em dashes, no hedging, no template phrases, no vocabulary tier violations. Only one pattern needed fixing.
+
+**Edits made:**
+
+- **Line 1** — "Communication matters. New or experienced, how you convey ideas shapes your success." → "How you communicate shapes your success, whether you're new or experienced."
+  - Removed the generic topic-opener ("Communication matters") — a common AI slot-fill pattern
+  - Restructured the "X or Y, Z" formulaic opening into a natural clause
+
+**Verification:** Re-read the file. No remaining AI tells. The piece reads like a human wrote it.
+
+**Ethics note:** These are signals, not proof. False positives are possible, especially for non-native English writers.

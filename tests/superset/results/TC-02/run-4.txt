@@ -1,0 +1,42 @@
+## Detect Mode — AI Pattern Audit
+
+### Issues Found
+
+**P1 — Obvious AI smell**
+
+- **Formulaic opening**: "In today's rapidly evolving digital landscape" — slot-fill opener, zero information
+- **Filler phrase**: "it's important to note that" — pure padding
+- **Template binary**: "Whether you're a seasoned professional or just starting out" — slot-fill demographic pair
+- **Cliché**: "make or break your success"
+- **Template transition**: "Let's dive into" — overused blog opener
+- **False concession structure** (×2): "It's not just about...; rather, it's about..." and "doesn't just inform; it guides"
+- **Compulsive rule of three**: "they craft, they hone, they iterate"
+- **Self-labeling significance**: "This trifecta of habits" — tells instead of shows
+- **Filler phrase**: "It's worth noting that"
+- **Template phrase**: "From the hook to the conclusion"
+- **Inflated language**: "serves as a building block toward a singular goal"
+- **Generic conclusion opener**: "In conclusion"
+- **Cliché**: "mastering communication is a journey, not a destination"
+- **Template closing**: "By embracing these principles, you'll be well-equipped to navigate"
+- **Cliché with twist**: "the pen is mightier than the sword, but only when wielded with intention"
+- **Tier 1 vocabulary**: "evolving," "landscape" (metaphorical), "resonates," "navigate the complexities"
+
+**P2 — Stylistic polish**
+
+- **Uniform paragraph length** — all 3–4 sentences, no variation
+- **Formulaic paragraph openings** — each paragraph starts with a setup/transition phrase
+- **Emotional flatline** — zero personal voice, opinion, or reaction
+- **Suspiciously clean grammar** — no fragments, no rough edges, no contractions beyond "it's"
+- **No sentence-length variation** — all medium-length declaratives
+- **No first-person perspective** — generic "you" throughout
+- **Over-polishing** — every sentence is complete and correct; nothing sounds drafted
+
+### Assessment
+
+Every paragraph in this text is built from the same template: transition phrase → setup → claim → elaboration → transition. The piece is structurally interchangeable — you could reorder the body paragraphs and lose nothing. The cliché density (4 in ~180 words) is the strongest single signal. The "trifecta" label and the "not X — it's Y" constructions are textbook LLM patterns.
+
+**Judgment calls**: The rule of three ("craft, hone, iterate") could be intentional rhetorical emphasis. "In conclusion" is also common in human-written student essays. But in aggregate with everything else, these reinforce the pattern.
+
+### Ethics Note
+
+These are signals, not proof. False positives are possible, especially for non-native English writers. The patterns flagged here are statistically more common in LLM output, but humans writing under deadline pressure or in unfamiliar genres produce the same shapes. Pair the signal with context before making any consequential decision.

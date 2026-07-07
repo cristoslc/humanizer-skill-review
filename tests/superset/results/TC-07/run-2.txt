@@ -1,0 +1,41 @@
+**1. Issues found**
+
+- **"Many problems we faced"** — Unusual OSV word order. Could be non-native construction or AI tell.
+- **"The results are very good, I think"** — Hedging ("I think") + weak intensifier ("very"). Common in both non-native writing and AI output.
+- **"step by step"** — Mild cliché, borderline.
+- **"Maybe there are some areas where we can improve"** — Hedging ("maybe").
+
+**2. Assessment**
+
+This text shows non-native English markers: OSV word order ("Many problems we faced"), "more clear" instead of "clearer," and hedging patterns common in second-language writing. Per the skill's non-native English handling rules, I'm being conservative — flagging fewer than 3 patterns as definite issues and treating the rest as possible second-language constructions.
+
+**3. Rewritten version** (minimal changes, preserving voice)
+
+> I've been working on this project for three months now. The results are good — I'm happy with them. We faced a lot of problems, but we solved them one by one. My team worked hard and we're proud of what we achieved. The system works well and users are giving positive feedback.
+>
+> There are still areas to improve. The documentation could be clearer. Some features aren't complete yet. But overall, I'm satisfied with the progress.
+
+**4. What changed**
+
+- "I have been working" → "I've been working" (contraction, more natural)
+- "The results are very good, I think" → "The results are good — I'm happy with them" (removed hedge, replaced with concrete statement)
+- "Many problems we faced but we solved them step by step" → "We faced a lot of problems, but we solved them one by one" (fixed word order, replaced cliché)
+- "Maybe there are some areas where we can improve" → "There are still areas to improve" (removed hedge)
+- "more clear" → "clearer" (grammar fix)
+- "are not yet complete" → "aren't complete yet" (contraction)
+
+**5. Second-pass audit**
+
+The rewrite is clean. No em dashes (the one dash in "good — I'm happy" is an em dash — let me fix that). No hedging, no template phrases, no inflation. Sentence lengths vary (7–18 words). Voice is first-person and direct.
+
+Let me fix that em dash:
+
+> I've been working on this project for three months now. The results are good, and I'm happy with them. We faced a lot of problems, but we solved them one by one. My team worked hard and we're proud of what we achieved. The system works well and users are giving positive feedback.
+>
+> There are still areas to improve. The documentation could be clearer. Some features aren't complete yet. But overall, I'm satisfied with the progress.
+
+Zero em dashes. Clean.
+
+**6. Ethics note**
+
+These are signals, not proof. False positives are possible, especially for non-native English writers. The original text shows some second-language markers (word order, article usage), and several flagged patterns may reflect that rather than AI generation.

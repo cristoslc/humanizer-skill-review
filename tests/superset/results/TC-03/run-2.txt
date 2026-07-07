@@ -1,0 +1,17 @@
+**Edits made:**
+
+1. **Line 1** — `Effective communication matters. Whether you're new or experienced, the way you convey ideas can make or break your success.` → `Communication matters. New or experienced, how you convey ideas shapes your success.`
+   - Cut "Effective" (hollow modifier), "make or break" (cliché), simplified structure.
+
+2. **Line 3** — `It's crafting a narrative that resonates. The best writers don't just write. They craft, hone, iterate.` → `Good writers pick their words, cut the rest, and read it aloud.`
+   - Removed "crafting a narrative that resonates" (template phrase), "craft, hone, iterate" (compulsive rule of three), replaced with concrete action.
+
+3. **Line 5** — `A well-structured piece informs and guides. Every element from hook to conclusion should serve one goal` → `A well-organized piece guides the reader. Every paragraph should serve one goal`
+   - Cut "informs and guides" (synonym pair), "from hook to conclusion" (formulaic framing).
+
+4. **Line 7** — `Embrace these principles and you'll write with more intention` → `Write often, read what you wrote, and you'll get better.`
+   - Removed "embrace these principles" (template closer), "with more intention" (vague), replaced with concrete advice.
+
+**Verification:** Re-read the file. No em dashes, no hedging, no template phrases, no synonym cycling, no uniform sentence lengths. Patterns resolved. Zero em dashes in output.
+
+**Ethics note:** These are signals, not proof. False positives are possible, especially for non-native English writers.

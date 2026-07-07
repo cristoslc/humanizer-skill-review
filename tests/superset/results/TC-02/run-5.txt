@@ -1,0 +1,30 @@
+## Issues found
+
+### P1 — Obvious AI smell
+
+- **Formulaic opening**: "In today's rapidly evolving digital landscape" — slot-fill construction, Tier 1 pattern
+- **Hedging filler**: "it's important to note that" — Tier 2 vocabulary, adds nothing
+- **"Let's" transition opener**: "Let's dive into the art of writing" — P1 template phrase
+- **"It's not X, it's Y" construction** (×2): "It's not just about stringing words together; rather, it's about crafting a narrative that resonates" and "A well-structured piece doesn't just inform; it guides the reader on a journey" — signature AI contrast structure
+- **Compulsive rule of three**: "they craft, they hone, they iterate" — forced triplet
+- **Self-labeling significance**: "This trifecta of habits" — tells the reader what to think instead of demonstrating it
+- **Hedging filler**: "It's worth noting that" — same pattern as above
+- **Em dash**: "don't just write — they craft" — one em dash present
+- **Generic conclusion opener**: "In conclusion" — template transition
+- **Generic conclusion template**: "By embracing these principles, you'll be well-equipped to navigate the complexities of modern writing" — slot-fill closer
+- **High Tier-2 vocabulary density**: *evolving, landscape, effective, critical, seasoned, convey, crafting, resonates, hone, iterate, trifecta, overlook, navigate, complexities, embracing, wielded, intention* — 17 Tier-2 words in ~160 words of prose, well above the cluster threshold
+
+### P2 — Stylistic polish
+
+- **Uniform paragraph length**: All three body paragraphs are 3–4 sentences — no rhythm variation
+- **Cliché cluster**: "make or break your success," "mastering communication is a journey, not a destination," "the pen is mightier than the sword, but only when wielded with intention" — three clichés in a short piece
+- **No concrete specifics**: Zero numbers, names, dates, or examples. Entirely abstract.
+- **Paragraph-reshuffle immunity**: Body paragraphs 2 and 3 could swap without breaking the piece — it's a list, not an argument
+
+## Assessment
+
+Every flag above is a clear problem for this text. The piece is a textbook example of AI-generated prose: formulaic bookends, recycled contrast structures, forced triples, and a thick layer of Tier-2 vocabulary that inflates without informing. The only judgment call is whether the cliché density (P2) is worth fixing — it is, because three clichés in ~160 words is unusually high even for AI output.
+
+## Ethics note
+
+These are signals, not proof. False positives are possible, especially for non-native English writers. The patterns flagged here are statistically more common in LLM output, but humans under deadline pressure or writing in unfamiliar genres produce the same shapes. Pair the signal with context: who wrote it, what genre, what other evidence you have.
