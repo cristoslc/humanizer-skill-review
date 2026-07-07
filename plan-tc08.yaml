@@ -1,0 +1,8 @@
+dangerously_write_trunk: true
+tasks:
+  - id: investigate-tc08-timeout
+    kind: headless-spike
+    model: ollama-cloud/deepseek-v4-flash:cloud
+    agent: explore
+    prompt: prompts/investigate-tc08-timeout.md
+    target: FINAL_OUTPUT.md

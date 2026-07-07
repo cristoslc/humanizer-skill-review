@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+# Rendered dispatch script — headless-spike
+#
+# Read-only investigation. Writes .lock on start, FINAL_OUTPUT.md on
+# completion, deletes .lock on exit.
+set -uo pipefail
+
+TASK_DIR=/Users/cristos/Documents/code/humanizer-skill-review/.subagents/investigate-tc08-timeout
+TASK_ID=investigate-tc08-timeout
+GENERATED_AT=20260707T203807Z
+CWD=/Users/cristos/Documents/code/humanizer-skill-review
+MODEL=ollama-cloud/deepseek-v4-flash:cloud
+AGENT=explore
+REPORT_PATH=FINAL_OUTPUT.md
+
+echo "PID=$$" > "$TASK_DIR/.lock"
+
+export OPENCODE_DISABLE_AUTOCOMPACT=true
+export OPENCODE_DISABLE_AUTOUPDATE=true
+unset OPENCODE_SERVER_PASSWORD
+
+echo "[dispatch-opencode] task_id=$TASK_ID generated=$GENERATED_AT"
+echo "[dispatch-opencode] cwd=$CWD"
+echo "[dispatch-opencode] model=$MODEL agent=$AGENT"
+echo "[dispatch-opencode] report=$REPORT_PATH"
+
+TIMEOUT_BIN="$(command -v gtimeout 2>/dev/null || command -v timeout 2>/dev/null || true)"
+if [ -n "$TIMEOUT_BIN" ]; then
+  TIMEOUT_PREFIX=("$TIMEOUT_BIN" "600")
+else
+  echo "[dispatch-opencode] warn: no timeout(1)/gtimeout on PATH; running without timeout" >&2
+  TIMEOUT_PREFIX=()
+fi
+
+"${TIMEOUT_PREFIX[@]+"${TIMEOUT_PREFIX[@]}"}" opencode run \
+  --dir "$CWD" \
+  --model "$MODEL" \
+  --agent "$AGENT" \
+  --format json \
+  --dangerously-skip-permissions \
+  --file "$REPORT_PATH" \
+  < "$TASK_DIR/prompt.md" \
+  2> "$TASK_DIR/stderr.log" \
+  | tee "$TASK_DIR/events.jsonl" \
+  > "$TASK_DIR/stdout.log"
+EXIT=$?
+
+SESSION_ID=$(head -1 "$TASK_DIR/events.jsonl" 2>/dev/null | sed 's/.*"sessionID":"\([^"]*\)".*/\1/' || echo "")
+
+cat > "$TASK_DIR/FINAL_OUTPUT.md" <<OUT
+# dispatch-opencode result
+
+task_id: $TASK_ID
+generated: $GENERATED_AT
+exit_code: $EXIT
+session_id: ${SESSION_ID:-unknown}
+model: $MODEL
+agent: $AGENT
+report: $REPORT_PATH
+OUT
+
+echo "" >> "$TASK_DIR/FINAL_OUTPUT.md"
+echo "## Output" >> "$TASK_DIR/FINAL_OUTPUT.md"
+python3 -c "
+import json, sys
+with open('$TASK_DIR/events.jsonl') as f:
+    for line in f:
+        try:
+            ev = json.loads(line)
+            if ev.get('type') == 'text' and ev.get('part', {}).get('type') == 'text':
+                print(ev['part']['text'])
+        except: pass
+" 2>/dev/null >> "$TASK_DIR/FINAL_OUTPUT.md" || true
+
+rm -f "$TASK_DIR/.lock"
+echo "[dispatch-opencode] exit=$EXIT"
+exit "$EXIT"
